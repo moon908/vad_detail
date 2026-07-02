@@ -1,0 +1,273 @@
+{
+  "users": [
+    {
+      "name": "Siddhesh Moon",
+      "email": "siddheshmoon908@gmail.com",
+      "passwordHash": "$2b$10$MJ3IRUVrmW/0LNrwa6uHPu2u04AIp.U6UGCZtJ6GYKfuLkdG9WM8W",
+      "id": "9143313a-b270-4e30-a37a-c527139d3028",
+      "createdAt": "2026-07-02T08:51:09.611Z"
+    },
+    {
+      "name": "Siddhesh Moon",
+      "email": "sidmoon908@gmail.com",
+      "passwordHash": "$2b$10$4DXEJAc4gxUTcECIgjQLpOxlEVZrrAqifjCtol.h2pwpFT/t/iYAu",
+      "id": "6372c4e2-b833-43bc-a610-ada375ff232d",
+      "createdAt": "2026-07-02T09:09:23.950Z"
+    }
+  ],
+  "analyses": [
+    {
+      "id": "242d211d-6e9a-40d6-b653-b453c6407f98",
+      "userId": "9143313a-b270-4e30-a37a-c527139d3028",
+      "filename": "voice-sample.wav",
+      "fileSize": 2320466,
+      "formattedSize": "2.2 MB",
+      "format": "WAV",
+      "duration": 26.3,
+      "speechPercentage": 91.66,
+      "silencePercentage": 8.34,
+      "totalSpeech": 24.106,
+      "totalSilence": 2.194,
+      "speechSegmentsCount": 5,
+      "silenceSegmentsCount": 5,
+      "longestSpeech": 9.308,
+      "shortestSpeech": 2.972,
+      "avgSpeech": 4.821,
+      "avgSilence": 0.439,
+      "estimatedWords": 56,
+      "estimatedSpeakingSpeedWpm": 140,
+      "status": "COMPLETED",
+      "reportUrls": {
+        "pdf": "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/report.pdf",
+        "docx": "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/report.docx",
+        "csv": "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/report.csv",
+        "json": "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/report.json",
+        "zip": "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/bundle.zip",
+        "speech_only": "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/speech_only.wav",
+        "silence_only": "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/silence_only.wav",
+        "segments": [
+          "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/segments/segment001.wav",
+          "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/segments/segment002.wav",
+          "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/segments/segment003.wav",
+          "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/segments/segment004.wav",
+          "/api/reports/242d211d-6e9a-40d6-b653-b453c6407f98/segments/segment005.wav"
+        ]
+      },
+      "aiInsights": [
+        "Speech density is exceptionally high. The speaker talks continuously with minimal pause time.",
+        "Speaking segments are conversational in length, typical of standard presentations or interactive dialogues.",
+        "The speaker moves quickly between thoughts, with minimal pause time. The flow is fast-paced.",
+        "The recording has a strong speech signal and is highly suitable for automated Speech-to-Text transcription.",
+        "Background silence is clean and well-structured, with clear boundaries between speech and non-speech regions."
+      ],
+      "segments": [
+        {
+          "id": 1,
+          "start": 0.034,
+          "end": 4.926,
+          "duration": 4.892
+        },
+        {
+          "id": 2,
+          "start": 5.474,
+          "end": 8.446,
+          "duration": 2.972
+        },
+        {
+          "id": 3,
+          "start": 9.09,
+          "end": 12.222,
+          "duration": 3.132
+        },
+        {
+          "id": 4,
+          "start": 12.706,
+          "end": 22.014,
+          "duration": 9.308
+        },
+        {
+          "id": 5,
+          "start": 22.498,
+          "end": 26.3,
+          "duration": 3.802
+        }
+      ],
+      "createdAt": "2026-07-02T09:01:26.176Z"
+    },
+    {
+      "id": "ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb",
+      "userId": "6372c4e2-b833-43bc-a610-ada375ff232d",
+      "filename": "music-sample-44100hz-16bit.wav",
+      "fileSize": 5292310,
+      "formattedSize": "5.0 MB",
+      "format": "WAV",
+      "duration": 30,
+      "speechPercentage": 0,
+      "silencePercentage": 100,
+      "totalSpeech": 0,
+      "totalSilence": 30,
+      "speechSegmentsCount": 0,
+      "silenceSegmentsCount": 1,
+      "longestSpeech": 0,
+      "shortestSpeech": 0,
+      "avgSpeech": 0,
+      "avgSilence": 30,
+      "estimatedWords": 0,
+      "estimatedSpeakingSpeedWpm": 0,
+      "status": "COMPLETED",
+      "reportUrls": {
+        "pdf": "/api/reports/ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb/report.pdf",
+        "docx": "/api/reports/ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb/report.docx",
+        "csv": "/api/reports/ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb/report.csv",
+        "json": "/api/reports/ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb/report.json",
+        "zip": "/api/reports/ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb/bundle.zip",
+        "speech_only": "/api/reports/ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb/speech_only.wav",
+        "silence_only": "/api/reports/ed9d2deb-ccab-4ea7-b0b1-d6e6e8da36fb/silence_only.wav",
+        "segments": []
+      },
+      "aiInsights": [
+        "Speech density is extremely low. The recording consists mostly of silence or background noise, with brief voice activity.",
+        "Speech segments are extremely short and rapid, which is common in short commands, interruptions, or high-noise files.",
+        "Due to low voice activity, this file may require noise gating or signal amplification before speech-to-text processing.",
+        "Background silence is clean and well-structured, with clear boundaries between speech and non-speech regions."
+      ],
+      "segments": [],
+      "createdAt": "2026-07-02T09:33:17.562Z"
+    },
+    {
+      "id": "38bcf77b-4e19-40c6-8146-e3a9af034f31",
+      "userId": "6372c4e2-b833-43bc-a610-ada375ff232d",
+      "filename": "voice-sample.wav",
+      "fileSize": 2320466,
+      "formattedSize": "2.2 MB",
+      "format": "WAV",
+      "duration": 26.3,
+      "speechPercentage": 91.66,
+      "silencePercentage": 8.34,
+      "totalSpeech": 24.106,
+      "totalSilence": 2.194,
+      "speechSegmentsCount": 5,
+      "silenceSegmentsCount": 5,
+      "longestSpeech": 9.308,
+      "shortestSpeech": 2.972,
+      "avgSpeech": 4.821,
+      "avgSilence": 0.439,
+      "estimatedWords": 56,
+      "estimatedSpeakingSpeedWpm": 140,
+      "status": "COMPLETED",
+      "reportUrls": {
+        "pdf": "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/report.pdf",
+        "docx": "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/report.docx",
+        "csv": "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/report.csv",
+        "json": "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/report.json",
+        "zip": "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/bundle.zip",
+        "speech_only": "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/speech_only.wav",
+        "silence_only": "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/silence_only.wav",
+        "segments": [
+          "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/segments/segment001.wav",
+          "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/segments/segment002.wav",
+          "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/segments/segment003.wav",
+          "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/segments/segment004.wav",
+          "/api/reports/38bcf77b-4e19-40c6-8146-e3a9af034f31/segments/segment005.wav"
+        ]
+      },
+      "aiInsights": [
+        "Speech density is exceptionally high. The speaker talks continuously with minimal pause time.",
+        "Speaking segments are conversational in length, typical of standard presentations or interactive dialogues.",
+        "The speaker moves quickly between thoughts, with minimal pause time. The flow is fast-paced.",
+        "The recording has a strong speech signal and is highly suitable for automated Speech-to-Text transcription.",
+        "Background silence is clean and well-structured, with clear boundaries between speech and non-speech regions."
+      ],
+      "segments": [
+        {
+          "id": 1,
+          "start": 0.034,
+          "end": 4.926,
+          "duration": 4.892
+        },
+        {
+          "id": 2,
+          "start": 5.474,
+          "end": 8.446,
+          "duration": 2.972
+        },
+        {
+          "id": 3,
+          "start": 9.09,
+          "end": 12.222,
+          "duration": 3.132
+        },
+        {
+          "id": 4,
+          "start": 12.706,
+          "end": 22.014,
+          "duration": 9.308
+        },
+        {
+          "id": 5,
+          "start": 22.498,
+          "end": 26.3,
+          "duration": 3.802
+        }
+      ],
+      "createdAt": "2026-07-02T09:35:39.146Z"
+    },
+    {
+      "id": "96b48dd3-9a4b-4017-ae06-65ad3d0c9153",
+      "userId": "6372c4e2-b833-43bc-a610-ada375ff232d",
+      "filename": "pure-tone.wav",
+      "fileSize": 3528530,
+      "formattedSize": "3.4 MB",
+      "format": "WAV",
+      "duration": 40,
+      "speechPercentage": 25.98,
+      "silencePercentage": 74.02,
+      "totalSpeech": 10.392,
+      "totalSilence": 29.608,
+      "speechSegmentsCount": 2,
+      "silenceSegmentsCount": 3,
+      "longestSpeech": 7.772,
+      "shortestSpeech": 2.62,
+      "avgSpeech": 5.196,
+      "avgSilence": 9.869,
+      "estimatedWords": 24,
+      "estimatedSpeakingSpeedWpm": 140,
+      "status": "COMPLETED",
+      "reportUrls": {
+        "pdf": "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/report.pdf",
+        "docx": "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/report.docx",
+        "csv": "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/report.csv",
+        "json": "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/report.json",
+        "zip": "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/bundle.zip",
+        "speech_only": "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/speech_only.wav",
+        "silence_only": "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/silence_only.wav",
+        "segments": [
+          "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/segments/segment001.wav",
+          "/api/reports/96b48dd3-9a4b-4017-ae06-65ad3d0c9153/segments/segment002.wav"
+        ]
+      },
+      "aiInsights": [
+        "This recording contains frequent pauses. Silence is common, indicating potential hesitations or a structured turn-taking dialogue.",
+        "Long uninterrupted speech segments indicate a monologue, lecture, or single-speaker narrative style.",
+        "Pauses between speech are long. This structure is typical of Q&A sessions, language learning exercises, or dictated text.",
+        "The recording is suitable for transcription; however, filtering out silence sections will improve transcription efficiency.",
+        "Background silence is clean and well-structured, with clear boundaries between speech and non-speech regions."
+      ],
+      "segments": [
+        {
+          "id": 1,
+          "start": 1.026,
+          "end": 8.798,
+          "duration": 7.772
+        },
+        {
+          "id": 2,
+          "start": 9.282,
+          "end": 11.902,
+          "duration": 2.62
+        }
+      ],
+      "createdAt": "2026-07-02T09:36:39.003Z"
+    }
+  ]
+}

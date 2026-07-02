@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../backend.Dockerfile
+    container_name: vad-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATA_DIR=/app/data
+      - PORT=8000
+    volumes:
+      - shared-data:/app/data
+    restart: always
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend.Dockerfile
+    container_name: vad-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - JWT_SECRET=secret-vad-analysis-platform-key-2026-docker
+      - NODE_ENV=production
+    volumes:
+      - shared-data:/app/data
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  shared-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data

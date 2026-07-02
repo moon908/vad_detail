@@ -1,0 +1,14 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+fastapi>=0.110.0
+uvicorn>=0.30.0
+python-multipart>=0.0.9
+pydantic>=2.0
+numpy
+pandas
+librosa
+soundfile
+reportlab
+python-docx
+matplotlib
+torch
+torchaudio
