@@ -233,9 +233,26 @@ async def analyze_audio(
         # Re-raise or wrap exception
         import traceback
         traceback.print_exc()
+        
+        err_type = type(e).__name__
+        err_msg = str(e)
+        
+        if err_type == "NoBackendError":
+            detail = (
+                "The server lacks the FFmpeg audio decoder backend required to decode this compressed format (e.g. MP3/M4A). "
+                "Please upload a standard WAV file instead, or install FFmpeg on the server."
+            )
+        elif err_type == "LibsndfileError" or "soundfile" in type(e).__module__:
+            detail = (
+                f"Failed to read audio file format: {err_msg if err_msg else 'Unsupported or corrupted format'}. "
+                "Please verify the file is a valid, uncorrupted WAV or MP3 audio recording."
+            )
+        else:
+            detail = f"An error occurred during audio processing: {err_msg}" if err_msg else "An unexpected error occurred during audio processing."
+            
         raise HTTPException(
-            status_code=500,
-            detail=f"An error occurred during audio processing: {str(e)}"
+            status_code=400 if (err_type in ["NoBackendError", "LibsndfileError"] or "soundfile" in type(e).__module__) else 500,
+            detail=detail
         )
 
 if __name__ == "__main__":
