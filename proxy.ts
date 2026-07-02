@@ -68,3 +68,5 @@ export const config = {
     '/api/reports/:path*',
   ],
 };
+
+export default proxy;
