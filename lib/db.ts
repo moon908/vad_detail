@@ -2,7 +2,10 @@ import fs from 'fs';
 import path from 'path';
 
 // Define DB path: project-root/data/db.json
-const DATA_DIR = path.join(process.cwd(), 'data');
+const IS_VERCEL = !!process.env.VERCEL;
+const DATA_DIR = IS_VERCEL 
+  ? '/tmp/data' 
+  : path.join(process.cwd(), 'data');
 const DB_PATH = path.join(DATA_DIR, 'db.json');
 
 export interface User {
