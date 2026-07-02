@@ -1,0 +1,18 @@
+{
+  "statistics": {
+    "duration": 9.587,
+    "totalSpeech": 0,
+    "totalSilence": 9.587,
+    "speechPercentage": 0.0,
+    "silencePercentage": 100.0,
+    "speechSegmentsCount": 0,
+    "silenceSegmentsCount": 1,
+    "longestSpeech": 0.0,
+    "shortestSpeech": 0.0,
+    "avgSpeech": 0.0,
+    "avgSilence": 9.587,
+    "estimatedWords": 0,
+    "estimatedSpeakingSpeedWpm": 0.0
+  },
+  "segments": []
+}

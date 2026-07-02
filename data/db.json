@@ -308,6 +308,95 @@
       ],
       "segments": [],
       "createdAt": "2026-07-02T12:44:42.056Z"
+    },
+    {
+      "id": "2f2748e1-2226-4caf-9fb1-0827c4af4e04",
+      "userId": "6372c4e2-b833-43bc-a610-ada375ff232d",
+      "filename": "alexzavesa-calm-elegant-logo-519008.mp3",
+      "fileSize": 306782,
+      "formattedSize": "299.6 KB",
+      "format": "MP3",
+      "duration": 9.587,
+      "speechPercentage": 0,
+      "silencePercentage": 100,
+      "totalSpeech": 0,
+      "totalSilence": 9.587,
+      "speechSegmentsCount": 0,
+      "silenceSegmentsCount": 1,
+      "longestSpeech": 0,
+      "shortestSpeech": 0,
+      "avgSpeech": 0,
+      "avgSilence": 9.587,
+      "estimatedWords": 0,
+      "estimatedSpeakingSpeedWpm": 0,
+      "status": "COMPLETED",
+      "reportUrls": {
+        "pdf": "/api/reports/2f2748e1-2226-4caf-9fb1-0827c4af4e04/report.pdf",
+        "docx": "/api/reports/2f2748e1-2226-4caf-9fb1-0827c4af4e04/report.docx",
+        "csv": "/api/reports/2f2748e1-2226-4caf-9fb1-0827c4af4e04/report.csv",
+        "json": "/api/reports/2f2748e1-2226-4caf-9fb1-0827c4af4e04/report.json",
+        "zip": "/api/reports/2f2748e1-2226-4caf-9fb1-0827c4af4e04/bundle.zip",
+        "speech_only": "/api/reports/2f2748e1-2226-4caf-9fb1-0827c4af4e04/speech_only.wav",
+        "silence_only": "/api/reports/2f2748e1-2226-4caf-9fb1-0827c4af4e04/silence_only.wav",
+        "segments": []
+      },
+      "aiInsights": [
+        "Speech density is extremely low. The recording consists mostly of silence or background noise, with brief voice activity.",
+        "Speech segments are extremely short and rapid, which is common in short commands, interruptions, or high-noise files.",
+        "Due to low voice activity, this file may require noise gating or signal amplification before speech-to-text processing.",
+        "Background silence is clean and well-structured, with clear boundaries between speech and non-speech regions."
+      ],
+      "segments": [],
+      "createdAt": "2026-07-02T13:49:26.975Z"
+    },
+    {
+      "id": "d135f05a-0cdb-4956-8420-446c2ca9e59d",
+      "userId": "6372c4e2-b833-43bc-a610-ada375ff232d",
+      "filename": "freesound_community-hello-48300.mp3",
+      "fileSize": 90720,
+      "formattedSize": "88.6 KB",
+      "format": "MP3",
+      "duration": 4.536,
+      "speechPercentage": 35.89,
+      "silencePercentage": 64.11,
+      "totalSpeech": 1.628,
+      "totalSilence": 2.908,
+      "speechSegmentsCount": 1,
+      "silenceSegmentsCount": 2,
+      "longestSpeech": 1.628,
+      "shortestSpeech": 1.628,
+      "avgSpeech": 1.628,
+      "avgSilence": 1.454,
+      "estimatedWords": 3,
+      "estimatedSpeakingSpeedWpm": 140,
+      "status": "COMPLETED",
+      "reportUrls": {
+        "pdf": "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/report.pdf",
+        "docx": "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/report.docx",
+        "csv": "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/report.csv",
+        "json": "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/report.json",
+        "zip": "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/bundle.zip",
+        "speech_only": "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/speech_only.wav",
+        "silence_only": "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/silence_only.wav",
+        "segments": [
+          "/api/reports/d135f05a-0cdb-4956-8420-446c2ca9e59d/segments/segment001.wav"
+        ]
+      },
+      "aiInsights": [
+        "This recording contains frequent pauses. Silence is common, indicating potential hesitations or a structured turn-taking dialogue.",
+        "Speaking segments are conversational in length, typical of standard presentations or interactive dialogues.",
+        "The recording is suitable for transcription; however, filtering out silence sections will improve transcription efficiency.",
+        "Background silence is clean and well-structured, with clear boundaries between speech and non-speech regions."
+      ],
+      "segments": [
+        {
+          "id": 1,
+          "start": 1.634,
+          "end": 3.262,
+          "duration": 1.628
+        }
+      ],
+      "createdAt": "2026-07-02T13:55:27.004Z"
     }
   ]
 }
