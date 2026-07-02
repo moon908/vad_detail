@@ -268,6 +268,46 @@
         }
       ],
       "createdAt": "2026-07-02T09:36:39.003Z"
+    },
+    {
+      "id": "7903a3da-2691-433f-a7b1-bc78b9a832e2",
+      "userId": "6372c4e2-b833-43bc-a610-ada375ff232d",
+      "filename": "sigmamusicart-no-copyright-music-537751.mp3",
+      "fileSize": 3943680,
+      "formattedSize": "3.8 MB",
+      "format": "MP3",
+      "duration": 123.24,
+      "speechPercentage": 0,
+      "silencePercentage": 100,
+      "totalSpeech": 0,
+      "totalSilence": 123.24,
+      "speechSegmentsCount": 0,
+      "silenceSegmentsCount": 1,
+      "longestSpeech": 0,
+      "shortestSpeech": 0,
+      "avgSpeech": 0,
+      "avgSilence": 123.24,
+      "estimatedWords": 0,
+      "estimatedSpeakingSpeedWpm": 0,
+      "status": "COMPLETED",
+      "reportUrls": {
+        "pdf": "/api/reports/7903a3da-2691-433f-a7b1-bc78b9a832e2/report.pdf",
+        "docx": "/api/reports/7903a3da-2691-433f-a7b1-bc78b9a832e2/report.docx",
+        "csv": "/api/reports/7903a3da-2691-433f-a7b1-bc78b9a832e2/report.csv",
+        "json": "/api/reports/7903a3da-2691-433f-a7b1-bc78b9a832e2/report.json",
+        "zip": "/api/reports/7903a3da-2691-433f-a7b1-bc78b9a832e2/bundle.zip",
+        "speech_only": "/api/reports/7903a3da-2691-433f-a7b1-bc78b9a832e2/speech_only.wav",
+        "silence_only": "/api/reports/7903a3da-2691-433f-a7b1-bc78b9a832e2/silence_only.wav",
+        "segments": []
+      },
+      "aiInsights": [
+        "Speech density is extremely low. The recording consists mostly of silence or background noise, with brief voice activity.",
+        "Speech segments are extremely short and rapid, which is common in short commands, interruptions, or high-noise files.",
+        "Due to low voice activity, this file may require noise gating or signal amplification before speech-to-text processing.",
+        "Background silence is clean and well-structured, with clear boundaries between speech and non-speech regions."
+      ],
+      "segments": [],
+      "createdAt": "2026-07-02T12:44:42.056Z"
     }
   ]
 }

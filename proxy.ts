@@ -5,7 +5,7 @@ import { jwtVerify } from 'jose';
 const JWT_SECRET = process.env.JWT_SECRET || 'secret-vad-analysis-platform-key-2026';
 const secretKey = new TextEncoder().encode(JWT_SECRET);
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const token = request.cookies.get('auth-token')?.value;
 
@@ -27,7 +27,7 @@ export async function middleware(request: NextRequest) {
       const verified = await jwtVerify(token, secretKey);
       payload = verified.payload;
     } catch (err) {
-      console.warn('JWT verification failed in middleware:', err);
+      console.warn('JWT verification failed in proxy:', err);
     }
   }
 
@@ -54,7 +54,7 @@ export async function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-// Config to specify which paths the middleware runs on
+// Config to specify which paths the proxy runs on
 export const config = {
   matcher: [
     '/login',
