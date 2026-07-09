@@ -92,7 +92,7 @@ export default function DashboardClient({ user, initialAnalyses }: DashboardClie
       {/* 1. Header welcome */}
       <div className="mb-8">
         <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-          Welcome back, {user.name.split(' ')[0]}!
+          Welcome back!
         </h2>
         <p className="text-slate-500 dark:text-slate-400 mt-1 text-sm">
           Here is your speech analysis overview for today.

@@ -67,10 +67,30 @@ if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
+const DEFAULT_USER = {
+  id: 'default-user-id',
+  email: 'user@example.com',
+  passwordHash: '',
+  name: 'Platform User',
+  createdAt: '2026-07-10T00:00:00.000Z'
+};
+
 // Initialize database file if it doesn't exist
 if (!fs.existsSync(DB_PATH)) {
-  const initialData: DatabaseSchema = { users: [], analyses: [] };
+  const initialData: DatabaseSchema = { users: [DEFAULT_USER], analyses: [] };
   fs.writeFileSync(DB_PATH, JSON.stringify(initialData, null, 2), 'utf-8');
+} else {
+  // Ensure the default user is present
+  try {
+    const data = fs.readFileSync(DB_PATH, 'utf-8');
+    const parsed = JSON.parse(data) as DatabaseSchema;
+    if (!parsed.users.some(u => u.id === DEFAULT_USER.id)) {
+      parsed.users.push(DEFAULT_USER);
+      fs.writeFileSync(DB_PATH, JSON.stringify(parsed, null, 2), 'utf-8');
+    }
+  } catch (e) {
+    console.error('Failed to seed default user:', e);
+  }
 }
 
 /**

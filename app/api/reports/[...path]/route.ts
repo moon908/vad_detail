@@ -13,20 +13,7 @@ export async function GET(
   { params }: { params: Promise<{ path: string[] }> }
 ) {
   try {
-    // 1. Authenticate user
-    const cookieStore = await cookies();
-    const token = cookieStore.get('auth-token')?.value;
-    if (!token) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    let userId = '';
-    try {
-      const { payload } = await jwtVerify(token, secretKey);
-      userId = payload.userId as string;
-    } catch (err) {
-      return NextResponse.json({ error: 'Invalid authentication token' }, { status: 401 });
-    }
+    // 1. Authenticate user (Bypassed)
 
     // 2. Resolve parameters (must await params in Next.js 15+)
     const resolvedParams = await params;
@@ -39,14 +26,10 @@ export async function GET(
     const analysisId = pathArray[0];
     const remainingPath = pathArray.slice(1);
 
-    // 3. Verify user ownership of this analysis
+    // 3. Verify existence of this analysis
     const analysis = db.getAnalysisById(analysisId);
     if (!analysis) {
       return NextResponse.json({ error: 'Analysis not found' }, { status: 404 });
-    }
-
-    if (analysis.userId !== userId) {
-      return NextResponse.json({ error: 'Access forbidden: You do not own this resource' }, { status: 403 });
     }
 
     // 4. Resolve local file path

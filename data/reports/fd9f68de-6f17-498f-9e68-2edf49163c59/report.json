@@ -1,0 +1,43 @@
+{
+  "statistics": {
+    "duration": 131.709,
+    "totalSpeech": 119.504,
+    "totalSilence": 12.205,
+    "speechPercentage": 90.73,
+    "silencePercentage": 9.27,
+    "speechSegmentsCount": 4,
+    "silenceSegmentsCount": 5,
+    "longestSpeech": 50.78,
+    "shortestSpeech": 0.828,
+    "avgSpeech": 29.876,
+    "avgSilence": 2.441,
+    "estimatedWords": 278,
+    "estimatedSpeakingSpeedWpm": 140.0
+  },
+  "segments": [
+    {
+      "id": 1,
+      "start": 0.77,
+      "end": 24.094,
+      "duration": 23.324
+    },
+    {
+      "id": 2,
+      "start": 24.674,
+      "end": 75.454,
+      "duration": 50.78
+    },
+    {
+      "id": 3,
+      "start": 76.066,
+      "end": 120.638,
+      "duration": 44.572
+    },
+    {
+      "id": 4,
+      "start": 121.634,
+      "end": 122.462,
+      "duration": 0.828
+    }
+  ]
+}

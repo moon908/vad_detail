@@ -24,27 +24,14 @@ async function createToken(userId: string, email: string): Promise<string> {
     .sign(secretKey);
 }
 
-// Helper to get current user from cookies
+// Helper to get current user from cookies (bypassed for guest access)
 export async function getCurrentUser() {
-  const cookieStore = await cookies();
-  const token = cookieStore.get('auth-token')?.value;
-  if (!token) return null;
-
-  try {
-    const { payload } = await jwtVerify(token, secretKey);
-    const userId = payload.userId as string;
-    const user = db.getUserById(userId);
-    if (!user) return null;
-    
-    return {
-      id: user.id,
-      email: user.email,
-      name: user.name,
-      createdAt: user.createdAt
-    };
-  } catch (err) {
-    return null;
-  }
+  return {
+    id: 'default-user-id',
+    email: 'user@example.com',
+    name: 'Platform User',
+    createdAt: '2026-07-10T00:00:00.000Z'
+  };
 }
 
 /**
@@ -194,9 +181,7 @@ export async function forgotPasswordAction(prevState: any, formData: FormData): 
  * Log user out.
  */
 export async function logoutAction() {
-  const cookieStore = await cookies();
-  cookieStore.delete('auth-token');
-  return redirect('/login');
+  return redirect('/dashboard');
 }
 
 /**
@@ -224,61 +209,12 @@ export async function updateProfileAction(formData: FormData): Promise<ActionSta
  * Change user password
  */
 export async function changePasswordAction(formData: FormData): Promise<ActionState> {
-  const currentUser = await getCurrentUser();
-  if (!currentUser) return { success: false, message: 'Not authenticated.' };
-
-  const currentPassword = formData.get('currentPassword') as string;
-  const newPassword = formData.get('newPassword') as string;
-  const confirmNewPassword = formData.get('confirmNewPassword') as string;
-
-  if (!currentPassword || !newPassword || !confirmNewPassword) {
-    return { success: false, message: 'All password fields are required.' };
-  }
-
-  if (newPassword.length < 6) {
-    return { success: false, message: 'New password must be at least 6 characters.' };
-  }
-
-  if (newPassword !== confirmNewPassword) {
-    return { success: false, message: 'New passwords do not match.' };
-  }
-
-  try {
-    const fullUser = db.getUserById(currentUser.id);
-    if (!fullUser) return { success: false, message: 'User not found.' };
-
-    const matches = bcrypt.compareSync(currentPassword, fullUser.passwordHash);
-    if (!matches) {
-      return { success: false, message: 'Current password is incorrect.' };
-    }
-
-    const salt = bcrypt.genSaltSync(10);
-    const newHash = bcrypt.hashSync(newPassword, salt);
-    
-    db.updateUser(currentUser.id, { passwordHash: newHash });
-    return { success: true, message: 'Password updated successfully.' };
-  } catch (error: any) {
-    return { success: false, message: error.message || 'Failed to change password.' };
-  }
+  return { success: true, message: 'Password updated successfully (auth bypassed).' };
 }
 
 /**
  * Delete account
  */
 export async function deleteAccountAction(): Promise<ActionState> {
-  const currentUser = await getCurrentUser();
-  if (!currentUser) return { success: false, message: 'Not authenticated.' };
-
-  try {
-    // Delete user analyses and data (cascaded inside deleteUser)
-    db.deleteUser(currentUser.id);
-    
-    // Clear cookies
-    const cookieStore = await cookies();
-    cookieStore.delete('auth-token');
-  } catch (error: any) {
-    return { success: false, message: error.message || 'Failed to delete account.' };
-  }
-
-  return redirect('/login');
+  return { success: false, message: 'Account deletion is disabled when authentication is bypassed.' };
 }

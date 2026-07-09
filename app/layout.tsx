@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <NextTopLoader 
+          color="linear-gradient(to right, #3b82f6, #6366f1, #a855f7)"
+          height={3}
+          showSpinner={false}
+          shadow="0 0 10px #6366f1, 0 0 5px #3b82f6"
+        />
+        {children}
+      </body>
     </html>
   );
 }

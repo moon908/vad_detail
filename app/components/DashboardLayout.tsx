@@ -121,16 +121,7 @@ export default function DashboardLayout({ children, user }: DashboardLayoutProps
           })}
         </nav>
 
-        {/* Sidebar Footer */}
-        <div className="p-4 border-t border-slate-100 dark:border-slate-800">
-          <button 
-            onClick={handleLogout}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 transition-all cursor-pointer"
-          >
-            <LogOut className="w-5 h-5" />
-            <span>Sign Out</span>
-          </button>
-        </div>
+
       </aside>
 
       {/* 2. Mobile Nav Backdrop & Sidebar */}
@@ -188,15 +179,7 @@ export default function DashboardLayout({ children, user }: DashboardLayoutProps
                 })}
               </nav>
 
-              <div className="p-4 border-t border-slate-100 dark:border-slate-800">
-                <button 
-                  onClick={handleLogout}
-                  className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 transition-all cursor-pointer"
-                >
-                  <LogOut className="w-5 h-5" />
-                  <span>Sign Out</span>
-                </button>
-              </div>
+
             </motion.aside>
           </>
         )}
@@ -327,15 +310,7 @@ export default function DashboardLayout({ children, user }: DashboardLayoutProps
                             </div>
                           </Link>
                         </div>
-                        <div className="py-1.5">
-                          <button 
-                            onClick={handleLogout}
-                            className="w-full text-left px-4 py-2 text-xs text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 flex items-center gap-2.5 cursor-pointer"
-                          >
-                            <LogOut className="w-4 h-4" />
-                            <span>Sign Out</span>
-                          </button>
-                        </div>
+
                       </motion.div>
                     </>
                   )}
